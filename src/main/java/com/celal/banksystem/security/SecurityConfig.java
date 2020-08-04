@@ -1,6 +1,6 @@
 package com.celal.banksystem.security;
 
-import org.farid.security.jwt.JwtFilter;
+import com.celal.banksystem.security.jwt.JwtFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

@@ -1,8 +1,9 @@
 package com.celal.banksystem.controller;
 
-import org.farid.api.service.LogRegService;
-import org.farid.libs.response.LoginResponse;
-import org.farid.libs.response.RegisterResponse;
+import com.celal.banksystem.libs.response.LoginResponse;
+import com.celal.banksystem.libs.response.RegisterResponse;
+import com.celal.banksystem.service.LogRegService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,13 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
+@RequiredArgsConstructor
 public class LogRegController {
 
     private final LogRegService service;
-
-    public LogRegController(LogRegService service) {
-        this.service = service;
-    }
 
     @PostMapping("/login")
     public LoginResponse postLogin(@RequestParam("email") String email, @RequestParam("password") String password) {

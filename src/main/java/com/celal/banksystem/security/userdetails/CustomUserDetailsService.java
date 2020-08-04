@@ -1,8 +1,8 @@
 package com.celal.banksystem.security.userdetails;
 
+import com.celal.banksystem.libs.entity.User;
+import com.celal.banksystem.repositories.UserRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.farid.libs.User;
-import org.farid.repositories.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

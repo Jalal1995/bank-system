@@ -1,4 +1,4 @@
-package com.celal.banksystem.libs;
+package com.celal.banksystem.libs.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

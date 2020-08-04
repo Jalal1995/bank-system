@@ -1,6 +1,6 @@
 package com.celal.banksystem.service;
 
-import com.celal.banksystem.libs.User;
+import com.celal.banksystem.libs.entity.User;
 import com.celal.banksystem.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
