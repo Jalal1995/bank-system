@@ -28,10 +28,5 @@ public class Customer {
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Credit> credits = new ArrayList<>();
 
-    public Customer(String name, Integer maxLoanAmount) {
-        this.name = name;
-        this.maxLoanAmount = maxLoanAmount;
-    }
-
 }
 

@@ -3,7 +3,6 @@ package com.celal.banksystem.utils;
 import com.celal.banksystem.libs.entity.Credit;
 import com.celal.banksystem.libs.entity.Customer;
 import com.celal.banksystem.libs.entity.User;
-import com.celal.banksystem.repositories.CreditRepository;
 import com.celal.banksystem.repositories.CustomerRepository;
 import com.celal.banksystem.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +12,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -29,7 +27,6 @@ public class AutoRun {
     private final PasswordEncoder encoder;
     private final UserRepository userRepository;
     private final CustomerRepository customerRepository;
-    private final CreditRepository creditRepository;
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     @Bean
@@ -37,6 +34,7 @@ public class AutoRun {
         return (String... args) -> {
             User user = new User("test", encoder.encode("test"));
             userRepository.save(user);
+
             Customer customer = Customer.builder()
                     .name("cust1")
                     .maxLoanAmount(300)
